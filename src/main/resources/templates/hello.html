@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ja" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hello Page</title>
+    <script
+      defer
+      type="module"
+      src="https://yamatoautoworks-vehicle-management-c63e17.gitlab.io/base/yg-index.bundled.js"
+    ></script>
+    <script src="https://yamatoautoworks-vehicle-management-c63e17.gitlab.io/base/yg-tailwind.js"></script>
+</head>
+<body class="yg-bg-gray-100 yg-p-10">
+    <yg-card color="primary" gradient>
+        <h1>🎉 Welcome to Thymeleaf!</h1>
+        <p class="message" th:text="${message}">Default message</p>
+        <p>使用フレームワーク: <span class="highlight" th:text="${name}">Framework Name</span></p>
+        <p class="timestamp">現在時刻: <span th:text="${#temporals.format(#temporals.createNow(), 'yyyy年MM月dd日 HH:mm:ss')}"></span></p>
+        <div class="yg-flex yg-justify-end">
+        <yg-button
+      
+        >ボタン</yg-button>
+    </div>
+    </yg-card>
+</body>
+</html> 

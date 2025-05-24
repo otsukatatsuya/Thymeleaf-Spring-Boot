@@ -1,0 +1,7 @@
+target/
+.mvn/
+node_modules/
+*.jar
+*.class
+.git/
+*.md 
