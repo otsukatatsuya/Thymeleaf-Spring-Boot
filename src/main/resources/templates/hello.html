@@ -17,9 +17,16 @@
         <p class="message" th:text="${message}">Default message</p>
         <p>使用フレームワーク: <span class="highlight" th:text="${name}">Framework Name</span></p>
         <p class="timestamp">現在時刻: <span th:text="${#temporals.format(#temporals.createNow(), 'yyyy年MM月dd日 HH:mm:ss')}"></span></p>
+        <form th:action="@{/hello}" th:object="${form}" method="post" class="yg-space-y-4">
+            <label for="username">名前：</label>
+
+            <input type="text" th:field="*{username}" placeholder="お名前を入力" required>
+            <div class="yg-flex yg-justify-end">
+                <yg-button type="submit">送信</yg-button>
+            </div>
+        </form>
         <div class="yg-flex yg-justify-end">
         <yg-button
-      
         >ボタン</yg-button>
     </div>
     </yg-card>
